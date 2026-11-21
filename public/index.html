@@ -1,0 +1,153 @@
+
+        <!DOCTYPE html>
+        <html lang="en">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            <title>Simple Calculator</title>
+
+            <link rel="stylesheet" href="css/style.css">
+        </head>
+
+        <body>
+
+            <div class="app-container">
+
+                <header class="header">
+
+                    <div class="logo">
+                        <span class="logo-icon">✳</span>
+
+                        <div>
+                            <h1>Web Calculator</h1>
+                        </div>
+                    </div>
+
+                    <button id="themeBtn" class="theme-btn">
+                        ☀
+                    </button>
+
+                </header>
+
+
+                <main class="main-content">
+
+                    <!-- Calculator -->
+
+                    <section class="calculator">
+
+                        <div class="section-heading">
+                            <div>
+                                <h2>Calculator</h2>
+                                <p>Perform your calculations</p>
+                            </div>
+
+                            <span class="status">● Active</span>
+                        </div>
+
+
+                        <div class="display">
+
+                            <div id="expression" class="expression">
+                                0
+                            </div>
+
+                            <div id="result" class="result">
+                                0
+                            </div>
+
+                        </div>
+
+
+                        <div class="buttons">
+
+                            <button class="btn utility" data-action="clear">AC</button>
+                            <button class="btn utility" data-action="delete">DEL</button>
+                            <button class="btn utility" data-value="%">%</button>
+                            <button class="btn operator" data-value="/">÷</button>
+
+                            <button class="btn" data-value="7">7</button>
+                            <button class="btn" data-value="8">8</button>
+                            <button class="btn" data-value="9">9</button>
+                            <button class="btn operator" data-value="*">×</button>
+
+                            <button class="btn" data-value="4">4</button>
+                            <button class="btn" data-value="5">5</button>
+                            <button class="btn" data-value="6">6</button>
+                            <button class="btn operator" data-value="-">−</button>
+
+                            <button class="btn" data-value="1">1</button>
+                            <button class="btn" data-value="2">2</button>
+                            <button class="btn" data-value="3">3</button>
+                            <button class="btn operator" data-value="+">+</button>
+
+                            <button class="btn" data-action="bracket"></button>
+                            <button class="btn" data-value="0">0</button>
+                            <button class="btn" data-value=".">.</button>
+                            <button class="btn equals" data-action="calculate">=</button>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- Calculation History -->
+
+                    <section class="history">
+
+                        <div class="section-heading">
+
+                            <div>
+                                <h2>History</h2>
+                                <p>Your recent calculations</p>
+                            </div>
+
+
+                            <button id="clearHistory" class="clear-history">
+                                Clear
+                            </button>
+
+                        </div>
+                        
+        <!-- SEARCH HISTORY -->
+
+        <div class="history-search">
+
+            <span class="search-icon">⌕</span>
+
+            <input
+                type="text"
+                id="historySearch"
+                placeholder="Search calculations..."
+                autocomplete="off"
+            >
+
+            <button id="clearSearch" type="button" aria-label="Clear search">
+                ×
+            </button>
+
+        </div>
+
+        <div id="historyList" class="history-list">
+
+                            <p class="empty">No calculations yet.</p>
+
+                        </div>
+
+                    </section>
+
+                </main>
+
+
+                <footer>
+                    <p>WebCalc © 2026 | Full Stack Web Development Project</p>
+                </footer>
+
+            </div>
+
+            <script src="js/script.js"></script>
+
+        </body>
+        </html>

@@ -1,0 +1,399 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --bg: #0b1020;
+    --panel: #151c30;
+    --button: #202941;
+    --text: #f8fafc;
+    --muted: #94a3b8;
+    --accent: #8b5cf6;
+    --border: #29334b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+.app-container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 30px 24px;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 45px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo-icon {
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    padding: 13px;
+    border-radius: 13px;
+    font-size: 24px;
+}
+
+.logo h1 {
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.logo p {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.theme-btn {
+    background: var(--panel);
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 12px 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Main Layout */
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 25px;
+    align-items: start;
+}
+
+.calculator,
+.history {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    padding: 25px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+    font-size: 19px;
+}
+
+.section-heading p {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+.status {
+    color: #4ade80;
+    font-size: 11px;
+}
+
+/* Display */
+
+.display {
+    background: #0b1224;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    min-height: 135px;
+    padding: 22px;
+    margin-bottom: 22px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.expression {
+    color: var(--muted);
+    font-size: 19px;
+    overflow-wrap: anywhere;
+}
+
+.result {
+    color: white;
+    font-size: clamp(30px, 5vw, 40px);
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+/* Buttons */
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.btn {
+    height: 65px;
+    border: none;
+    border-radius: 14px;
+    background: var(--button);
+    color: var(--text);
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    filter: brightness(1.25);
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.utility {
+    color: #a78bfa;
+}
+
+.operator {
+    background: #332858;
+    color: #c4b5fd;
+}
+
+.equals {
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    color: white;
+}
+
+/* History */
+
+.clear-history {
+    background: transparent;
+    border: none;
+    color: #a78bfa;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 450px;
+    overflow-y: auto;
+}
+
+.history-item {
+    background: var(--button);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.history-item:hover {
+    border-color: var(--accent);
+}
+
+.history-expression {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 8px;
+    overflow-wrap: anywhere;
+}
+
+.history-result {
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.history-date {
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 8px;
+}
+
+.empty {
+    color: var(--muted);
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 13px;
+}
+/*Search History*/
+
+/* =================================
+   SEARCH HISTORY
+================================= */
+
+.history-search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    background: var(--display);
+    border: 1px solid var(--border);
+
+    padding: 0 14px;
+    height: 46px;
+
+    border-radius: 12px;
+    margin-bottom: 18px;
+
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.history-search:focus-within {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.12);
+}
+
+.search-icon {
+    color: var(--muted);
+    font-size: 23px;
+}
+
+.history-search input {
+    flex: 1;
+    min-width: 0;
+
+    background: transparent;
+    border: none;
+    outline: none;
+
+    color: var(--text);
+    font-family: inherit;
+    font-size: 12px;
+}
+
+.history-search input::placeholder {
+    color: var(--muted);
+}
+
+.history-search button {
+    border: none;
+    background: transparent;
+
+    color: var(--muted);
+    font-size: 21px;
+
+    cursor: pointer;
+    display: none;
+}
+
+.history-search button:hover {
+    color: var(--text);
+}
+
+.history-search.has-value button {
+    display: block;
+}
+
+/* No search results */
+
+.no-search-results {
+    text-align: center;
+    padding: 35px 12px;
+    color: var(--muted);
+}
+
+.no-search-results .empty-icon {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.no-search-results h4 {
+    color: var(--text);
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+.no-search-results p {
+    font-size: 11px;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    margin-top: 45px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* Light Theme */
+
+body.light {
+    --bg: #f1f5f9;
+    --panel: #ffffff;
+    --button: #e8edf5;
+    --text: #172033;
+    --muted: #64748b;
+    --border: #dbe2ed;
+}
+
+body.light .display {
+    background: #f8fafc;
+}
+
+body.light .result {
+    color: #172033;
+}
+
+/* Responsive */
+
+@media (max-width: 800px) {
+
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+
+    .app-container {
+        padding: 20px 15px;
+    }
+
+    .history-list {
+        max-height: 300px;
+    }
+
+}
+
+@media (max-width: 420px) {
+
+    .calculator,
+    .history {
+        padding: 17px;
+    }
+
+    .buttons {
+        gap: 8px;
+    }
+
+    .btn {
+        height: 57px;
+        font-size: 18px;
+    }
+
+    .header {
+        margin-bottom: 25px;
+    }
+
+}
