@@ -6,6 +6,9 @@ A modern, responsive, full-stack web calculator built using HTML, CSS, JavaScrip
 
 **[Open WebCalc – Smart Calculator](https://simple-calculator-4izp.onrender.com)**
 
+<img width="1220" height="832" alt="image" src="https://github.com/user-attachments/assets/51ddcaa3-2392-4cb3-9b5c-44fe7625d878" />
+
+
 ## ✨ Features
 
 - **Basic Arithmetic Operations:** Addition, subtraction, multiplication, and division.
